@@ -21,9 +21,9 @@ CREATE TABLE DISH (
 
 
 CREATE TABLE ORDER_DISH (
-	ID_order INTEGER NOT NULL,
-	ID_dish INTEGER NOT NULL,
-	Count integer NOT NULL
+	ID_order INTEGER ,
+	ID_dish INTEGER ,
+	Count integer
 ) WITH (
   OIDS=FALSE
 );
@@ -73,6 +73,13 @@ CREATE TABLE POINT (
   OIDS=FALSE
 );
 
+Create Table CUSTOMER(
+    ID INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY,
+    Phone varchar(10) NOT NULL,
+    Password varchar(255) NOT NULL
+)WITH (
+  OIDS=FALSE
+);
 
 
 

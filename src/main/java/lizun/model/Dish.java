@@ -19,14 +19,14 @@ public class Dish {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    private Integer id;
     @Column(name = "Name")
-    String name;
+    private String name;
     @Column(name = "Price")
-    Integer price;
-    @ManyToOne
+    private Integer price;
+    @OneToOne
     @JoinColumn(name = "ID_group")
-    TypeOfDish group;
+    private TypeOfDish group;
 
     public Integer getId() {
         return id;
